@@ -1,10 +1,11 @@
 {
-  "id": "2024-09-26",
-  "title": "September 26th, 2024",
+  "id": "the-day-we-met",
+  "title": "The Day We Met",
+  "date": "2024-09-26",
   "body": [
     {
       "forgroundColor": "",
-      "backgroundColor": "#003366",
+      "backgroundColor": "#000033",
       "fontColor": "white",
       "text": [
         "Before I met you,",
@@ -26,8 +27,8 @@
     },
     {
       "forgroundColor": "",
-      "backgroundColor": "#FF6699",
-      "fontColor": "white",
+      "backgroundColor": "#FFFF99",
+      "fontColor": "black",
       "text": [
         "Then two primrose stars appeared,",
         "scattering the night's darkness and",
@@ -59,7 +60,7 @@
     },
     {
       "forgroundColor": "",
-      "backgroundColor": "#FF66CC",
+      "backgroundColor": "#FF3399",
       "fontColor": "white",
       "text": [
         "I felt peaceful,",
@@ -70,7 +71,7 @@
     },
     {
       "forgroundColor": "",
-      "backgroundColor": "#CC33FF",
+      "backgroundColor": "#FF66FF",
       "fontColor": "white",
       "text": [
         "Every winter memory became",

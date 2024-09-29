@@ -1,14 +1,20 @@
+import { Link } from 'react-router-dom';
+
+import css from './styles.module.css';
+
 export default function PoemNav(props) {
-  const { data, setView } = props;
+  const { data } = props;
 
   const navEls = data.map((poem) => (
-    <div key={poem.id} onClick={() => setView(poem.id)}>
-      <span>{poem.title}</span>
-    </div>
+    <Link key={poem.id} to={`/${poem.id}`}>
+      <div>
+        <span>{poem.title}</span>
+      </div>
+    </Link>
   ));
 
   return (
-    <div>
+    <div className={css.container}>
       {navEls}
     </div>
   );

@@ -1,27 +1,39 @@
-import { useState } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 
 import PoemView from './PoemView/index.jsx';
 import PoemNav from './PoemNav/index.jsx';
 
 import ViewNav from '../../layouts/ViewNav/index.jsx';
 
-import poem1 from '../../assets/poems/2024-09-26.json';
-import poem2 from '../../assets/poems/2024-09-28.json';
+import theDayWeMet from '../../assets/poems/the-day-we-met.json';
+import kastinah from '../../assets/poems/kastinah.json';
 
 const poems = [
-  poem1,
-  poem2
+  theDayWeMet,
+  kastinah
 ].reverse();
 
 export default function Poems() {
-  const [view, setView] = useState(poems[0].id);
+  const { poemId } = useParams();
+  const navigate = useNavigate();
+
+  const poemData = useMemo(() => {
+    return poems.find(p => p.id === poemId) || poems[0];
+  }, [poemId]);
+
+  useEffect(() => {
+    if (poemData.id !== poemId) {
+      navigate(`/${poemData.id}`, { replace: true });
+    }
+  }, [poemData, poemId])
 
   const navigation = (
-    <PoemNav data={poems} setView={setView} />
+    <PoemNav data={poems} />
   );
 
   const content = (
-    <PoemView data={poems.find(p => p.id === view)} />
+    <PoemView data={poemData} />
   );
 
   return (

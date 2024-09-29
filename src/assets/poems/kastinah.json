@@ -1,12 +1,13 @@
 {
-  "id": "2024-09-28",
-  "title": "September 28th, 2024",
+  "id": "kastinah",
+  "title": "Kastinah",
+  "date": "2024-09-28",
   "body": [
     {
       "forgroundColor": "",
-      "backgroundColor": "#FF6699",
+      "backgroundColor": "#9900FF",
       "fontColor": "white",
-      "highlightColor": "",
+      "highlightColor": "#FFAAAA",
       "transformations": "highlight_first_letter",
       "text": [
         "Kisses for you",

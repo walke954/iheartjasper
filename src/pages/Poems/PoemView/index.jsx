@@ -14,6 +14,21 @@ export default function PoemView(props) {
 
   const containerRef = useRef();
 
+  const updateBackgroundColor = useCallback((currentStanza, nextStanza, percent) => {
+    const currentBackgroundRGB = stringColorToRGB(currentStanza.backgroundColor);
+    const nextBackgroundRGB = stringColorToRGB(nextStanza.backgroundColor);
+
+    const interBackgroundRGB = currentBackgroundRGB.map((v, i) => {
+      return interpolate(v, nextBackgroundRGB[i], percent);
+    });
+
+    const [red, green, blue, alpha] = interBackgroundRGB;
+
+    const backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha || 1})`;
+
+    containerRef.current.style.backgroundColor = backgroundColor;
+  }, []);
+
   const adjustColors = useCallback((percent) => {
     if (!containerRef.current) {
       return;
@@ -26,19 +41,8 @@ export default function PoemView(props) {
     const currentStanza = data.body[index];
     const nextStanza = data.body[index + 1] || currentStanza;
 
-    const currentBackgroundRGB = stringColorToRGB(currentStanza.backgroundColor);
-    const nextBackgroundRGB = stringColorToRGB(nextStanza.backgroundColor);
-
-    const interBackgroundRGB = currentBackgroundRGB.map((v, i) => {
-      return interpolate(v, nextBackgroundRGB[i], floatIndex - index);
-    });
-
-    const [red, green, blue, alpha] = interBackgroundRGB;
-
-    const backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha || 1})`;
-
-    containerRef.current.style.backgroundColor = backgroundColor;
-  }, [data]);
+    updateBackgroundColor(currentStanza, nextStanza, floatIndex - index);
+  }, [data, updateBackgroundColor]);
 
   function onScroll(e) {
     const { scrollTop, scrollHeight, offsetHeight } = e.target;
