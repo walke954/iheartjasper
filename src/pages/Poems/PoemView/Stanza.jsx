@@ -8,7 +8,7 @@ export default function Stanza(props) {
   ));
 
   return (
-    <div className={css.stanza}>
+    <div className={css.stanza} style={{ color: data.fontColor }}>
       {lineEls}
     </div>
   );

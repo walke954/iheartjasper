@@ -3,7 +3,9 @@
   "title": "September 26th, 2024",
   "body": [
     {
-      "color": "blue",
+      "forgroundColor": "",
+      "backgroundColor": "#003366",
+      "fontColor": "white",
       "text": [
         "Before I met you,",
         "mountain streams fell",
@@ -12,7 +14,9 @@
       ]
     },
     {
-      "color": "",
+      "forgroundColor": "",
+      "backgroundColor": "#0066FF",
+      "fontColor": "white",
       "text": [
         "Glaciers evolved with seasons,",
         "yet mountains remained",
@@ -21,7 +25,9 @@
       ]
     },
     {
-      "color": "",
+      "forgroundColor": "",
+      "backgroundColor": "#FF6699",
+      "fontColor": "white",
       "text": [
         "Then two primrose stars appeared,",
         "scattering the night's darkness and",
@@ -30,7 +36,9 @@
       ]
     },
     {
-      "color": "",
+      "forgroundColor": "",
+      "backgroundColor": "#99FF99",
+      "fontColor": "black",
       "text": [
         "Mountain springs burst",
         "forth with warmth and joy,",
@@ -39,7 +47,9 @@
       ]
     },
     {
-      "color": "",
+      "forgroundColor": "",
+      "backgroundColor": "#99FFFF",
+      "fontColor": "black",
       "text": [
         "From there new streams flowed",
         "like melted candle wax,",
@@ -48,7 +58,9 @@
       ]
     },
     {
-      "color": "",
+      "forgroundColor": "",
+      "backgroundColor": "#FF66CC",
+      "fontColor": "white",
       "text": [
         "I felt peaceful,",
         "happy,",
@@ -57,7 +69,9 @@
       ]
     },
     {
-      "color": "",
+      "forgroundColor": "",
+      "backgroundColor": "#CC33FF",
+      "fontColor": "white",
       "text": [
         "Every winter memory became",
         "transient like a fading dream,",

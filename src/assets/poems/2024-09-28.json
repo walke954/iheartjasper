@@ -3,16 +3,20 @@
   "title": "September 28th, 2024",
   "body": [
     {
-      "color": "pink",
+      "forgroundColor": "",
+      "backgroundColor": "#FF6699",
+      "fontColor": "white",
+      "highlightColor": "",
+      "transformations": "highlight_first_letter",
       "text": [
-        "<span style=\"color: red\">K</span>isses for you",
-        "<span style=\"color: red\">A</span>nytime you are",
-        "<span style=\"color: red\">S</span>ad or",
-        "<span style=\"color: red\">T</span>ired...",
-        "<span style=\"color: red\">I</span> love you...",
-        "<span style=\"color: red\">N</span>ever have I felt",
-        "<span style=\"color: red\">A</span> love that makes me so",
-        "<span style=\"color: red\">H</span>appy &#10084;"
+        "Kisses for you",
+        "Anytime you are",
+        "Sad or",
+        "Tired...",
+        "I love you...",
+        "Never have I felt",
+        "A love that makes me so",
+        "Happy &#10084;"
       ]
     }
   ]

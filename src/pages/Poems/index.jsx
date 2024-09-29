@@ -11,7 +11,7 @@ import poem2 from '../../assets/poems/2024-09-28.json';
 const poems = [
   poem1,
   poem2
-];
+].reverse();
 
 export default function Poems() {
   const [view, setView] = useState(poems[0].id);
