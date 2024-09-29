@@ -4,6 +4,7 @@
   "date": "2024-09-26",
   "titleColor": "white",
   "transformations": "full_height",
+  "textAlign": "center",
   "body": [
     {
       "forgroundColor": "",

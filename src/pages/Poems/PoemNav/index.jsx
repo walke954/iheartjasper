@@ -7,8 +7,8 @@ export default function PoemNav(props) {
 
   const navEls = data.map((poem) => (
     <Link key={poem.id} to={`/${poem.id}`}>
-      <div>
-        <span>{poem.title}</span>
+      <div className={css.navItem}>
+        <span className={css.label}>{poem.title}</span>
       </div>
     </Link>
   ));

@@ -1,3 +1,16 @@
 .container {
 	padding: 16px;
 }
+
+.navItem {
+	color: black;
+	font-size: 18px;
+}
+
+.navItem:hover {
+	color: gray;
+}
+
+.navItem:hover > .label {
+	border-bottom: 2px solid gray;
+}

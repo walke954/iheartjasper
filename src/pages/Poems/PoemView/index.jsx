@@ -74,6 +74,7 @@ export default function PoemView(props) {
       key={i}
       data={stanza}
       fullHeight={data.transformations === 'full_height'}
+      textAlign={data.textAlign}
     />
   ));
 

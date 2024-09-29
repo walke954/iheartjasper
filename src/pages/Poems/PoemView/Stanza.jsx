@@ -1,7 +1,7 @@
 import css from './styles.module.css';
 
 export default function Stanza(props) {
-  const { data, fullHeight } = props;
+  const { data, fullHeight, textAlign } = props;
 
   const { transformations } = data;
 
@@ -20,10 +20,9 @@ export default function Stanza(props) {
 
   const stanzaStyles = {
     color: data.fontColor,
-    height: fullHeight ? '100vh' : undefined
+    height: fullHeight ? '100vh' : undefined,
+    alignItems: textAlign || undefined
   };
-
-  // full-height
 
   return (
     <div className={css.stanza} style={stanzaStyles}>
