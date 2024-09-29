@@ -1,0 +1,12 @@
+.container {
+  height: 100vh;
+  margin: 0px;
+  overflow-y: scroll;
+}
+
+.stanza {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
