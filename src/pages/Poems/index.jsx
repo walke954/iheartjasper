@@ -6,11 +6,11 @@ import PoemNav from './PoemNav/index.jsx';
 
 import ViewNav from '../../layouts/ViewNav/index.jsx';
 
-import theDayWeMet from '../../assets/poems/the-day-we-met.json';
+import firstSight from '../../assets/poems/first-sight.json';
 import kastinah from '../../assets/poems/kastinah.json';
 
 const poems = [
-  theDayWeMet,
+  firstSight,
   kastinah
 ].reverse();
 

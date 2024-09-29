@@ -1,7 +1,9 @@
 {
-  "id": "the-day-we-met",
-  "title": "The Day We Met",
+  "id": "first-sight",
+  "title": "First Sight",
   "date": "2024-09-26",
+  "titleColor": "white",
+  "transformations": "full_height",
   "body": [
     {
       "forgroundColor": "",
@@ -52,7 +54,7 @@
       "backgroundColor": "#99FFFF",
       "fontColor": "black",
       "text": [
-        "From there new streams flowed",
+        "New streams flowed",
         "like melted candle wax,",
         "and a blue sky dyed them",
         "gently with pastel grace."

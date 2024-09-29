@@ -1,6 +1,7 @@
 import { useRef, useEffect, useCallback } from 'react';
 
 import Stanza from './Stanza.jsx';
+import Title from './Title.jsx';
 
 import interpolate from '../../../utils/interpolate';
 import stringColorToRGB from '../../../utils/stringColorToRGB';
@@ -13,6 +14,7 @@ export default function PoemView(props) {
   const poemId = data.id;
 
   const containerRef = useRef();
+  const titleRef = useRef();
 
   const updateBackgroundColor = useCallback((currentStanza, nextStanza, percent) => {
     const currentBackgroundRGB = stringColorToRGB(currentStanza.backgroundColor);
@@ -34,8 +36,10 @@ export default function PoemView(props) {
       return;
     }
 
-    percent = Math.max(0, Math.min(0.99999, percent));
-    const floatIndex = Math.max(0, (data.body.length * percent) - 0.5);
+    const halfBodyLength = (1 / data.body.length) / 2;
+    percent = Math.max(0, Math.min(0.99999, percent - halfBodyLength));
+
+    const floatIndex = Math.max(0, data.body.length * percent);
     const index = Math.floor(floatIndex);
 
     const currentStanza = data.body[index];
@@ -47,7 +51,11 @@ export default function PoemView(props) {
   function onScroll(e) {
     const { scrollTop, scrollHeight, offsetHeight } = e.target;
 
-    const perc = scrollTop / (scrollHeight - offsetHeight);
+    const titleHeight = titleRef.current.offsetHeight;
+
+    const paddingHeight = parseFloat(getComputedStyle(e.target).padding);
+
+    const perc = (scrollTop - titleHeight - paddingHeight) / (scrollHeight - titleHeight - (paddingHeight * 2) - offsetHeight);
 
     if (isNaN(perc)) {
       return;
@@ -61,7 +69,13 @@ export default function PoemView(props) {
     adjustColors(0);
   }, [poemId]);
 
-  const bodyEls = data.body.map((stanza, i) => <Stanza key={i} data={stanza} />);
+  const bodyEls = data.body.map((stanza, i) => (
+    <Stanza
+      key={i}
+      data={stanza}
+      fullHeight={data.transformations === 'full_height'}
+    />
+  ));
 
   return (
     <div
@@ -69,6 +83,7 @@ export default function PoemView(props) {
       className={css.container}
       onScroll={onScroll}
     >
+      <Title ref={titleRef} data={data} />
       {bodyEls}
     </div>
   );

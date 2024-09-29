@@ -2,6 +2,8 @@
   "id": "kastinah",
   "title": "Kastinah",
   "date": "2024-09-28",
+  "titleColor": "white",
+  "transformations": null,
   "body": [
     {
       "forgroundColor": "",
