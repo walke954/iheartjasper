@@ -9,9 +9,8 @@
 .navTopbar {
   backgroud-color: white;
   border-bottom: 16px solid lightgray;
-  height: 32px;
+  height: 56px;
   z-index: 1;
-  padding: 4px;
 }
 
 .topbarActions {
@@ -21,7 +20,8 @@
 }
 
 .menuBtn {
-  height: 32px;
+  margin: 4px 16px;
+  height: 56px;
   padding: 4px;
   border: none;
   background-color: rgba(0, 0, 0, 0);
@@ -56,7 +56,7 @@
 }
 
 .contentContainer {
-  height: calc(100vh - 56px);
+  height: calc(100vh - 72px);
   flex-grow: 1;
   overflow: hidden;
 }
@@ -64,7 +64,7 @@
 .contentOverlay {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
-  height: calc(100vh - 56px);
+  height: calc(100vh - 72px);
   width: 100%;
 }
 
