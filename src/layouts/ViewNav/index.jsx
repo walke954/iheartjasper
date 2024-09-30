@@ -23,7 +23,6 @@ const ViewNav = (props, ref) => {
 
   return (
     <div>
-      <div className={css.whitespace} />
       <div className={css.container}>
         <nav className={css.navTopbar}>
           <div className={css.topbarActions}>
