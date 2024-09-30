@@ -18,14 +18,18 @@ export default function Stanza(props) {
     );
   });
 
-  const stanzaStyles = {
+  const calcStanzaStyles = {
     color: data.fontColor,
-    height: fullHeight ? '100vh' : undefined,
     alignItems: textAlign || undefined
   };
 
+  const stanzaStyles = [css.stanza];
+  if (fullHeight) {
+    stanzaStyles.push(css.fullHeight);
+  }
+
   return (
-    <div className={css.stanza} style={stanzaStyles}>
+    <div className={stanzaStyles.join(' ')} style={calcStanzaStyles}>
       {lineEls}
     </div>
   );
