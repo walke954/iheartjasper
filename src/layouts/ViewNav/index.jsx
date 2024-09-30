@@ -23,6 +23,7 @@ const ViewNav = (props, ref) => {
 
   return (
     <div className={css.container}>
+      <div className={css.whitespace} />
       <nav className={css.navTopbar}>
         <div className={css.topbarActions}>
           <button
