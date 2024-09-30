@@ -22,28 +22,30 @@ const ViewNav = (props, ref) => {
   }
 
   return (
-    <div className={css.container}>
+    <div>
       <div className={css.whitespace} />
-      <nav className={css.navTopbar}>
-        <div className={css.topbarActions}>
-          <button
-            className={css.menuBtn}
-            onClick={() => setCollapse(!collapse)}
-          >
-            <img src={menu} alt="show-menu-icon" />
-          </button>
-        </div>
-        <div className={dropdownStyles.join(' ')}>
+      <div className={css.container}>
+        <nav className={css.navTopbar}>
+          <div className={css.topbarActions}>
+            <button
+              className={css.menuBtn}
+              onClick={() => setCollapse(!collapse)}
+            >
+              <img src={menu} alt="show-menu-icon" />
+            </button>
+          </div>
+          <div className={dropdownStyles.join(' ')}>
+            {navigation}
+          </div>
+        </nav>
+        <nav className={css.navSidebar}>
           {navigation}
-        </div>
-      </nav>
-      <nav className={css.navSidebar}>
-        {navigation}
-      </nav>
-      <main className={css.contentContainer}>
-        <div className={overlayStyles} onClick={() => setCollapse(true)} />
-        {content}
-      </main>
+        </nav>
+        <main className={css.contentContainer}>
+          <div className={overlayStyles} onClick={() => setCollapse(true)} />
+          {content}
+        </main>
+      </div>
     </div>
   );
 }
