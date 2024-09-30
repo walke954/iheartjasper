@@ -8,7 +8,7 @@
 }
 
 .navTopbar {
-  backgroud-color: white;
+  background-color: white;
   border-bottom: 16px solid lightgray;
   height: 56px;
   z-index: 1;
@@ -55,6 +55,7 @@
   width: 320px;
   overflow: hidden;
   display: none;
+  background-color: white;
 }
 
 .contentContainer {

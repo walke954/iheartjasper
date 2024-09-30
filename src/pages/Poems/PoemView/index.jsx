@@ -28,7 +28,7 @@ export default function PoemView(props) {
 
     const backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha || 1})`;
 
-    containerRef.current.style.backgroundColor = backgroundColor;
+    document.body.style.backgroundColor = backgroundColor;
   }, []);
 
   const adjustColors = useCallback((percent) => {
