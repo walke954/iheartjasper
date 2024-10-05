@@ -1,0 +1,49 @@
+{
+  "id": "happy-birthday",
+  "title": "Happy Birthday 🎂",
+  "date": "2024-10-06",
+  "titleColor": "#191970",
+  "transformations": null,
+  "textAlign": null,
+  "body": [
+    {
+      "forgroundColor": null,
+      "backgroundColor": "#CCCCFF",
+      "fontColor": "#191970",
+      "highlightColor": null,
+      "transformations": null,
+      "text": [
+        "October 6th, happy birthday!",
+        "36 years ago, it was your first day.",
+        "I hope today isn't your worst day,",
+        "but if it is, then you should call me."
+      ]
+    },
+    {
+      "forgroundColor": null,
+      "backgroundColor": "#CCCCFF",
+      "fontColor": "#191970",
+      "highlightColor": null,
+      "transformations": null,
+      "text": [
+        "I don't want you to be lonely,",
+        "I hope my presence is enough.",
+        "I just want to hold you",
+        "until you feel loved."
+      ]
+    },
+    {
+      "forgroundColor": null,
+      "backgroundColor": "#CCCCFF",
+      "fontColor": "#191970",
+      "highlightColor": null,
+      "transformations": null,
+      "text": [
+        "So sleep softly until the morning's rise,",
+        "you're one year older, one year more wise.",
+        "I hope you relax and enjoy your day,",
+        "and end your night with a slice of cake."
+      ]
+    }
+  ]
+}

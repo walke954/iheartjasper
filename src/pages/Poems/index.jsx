@@ -8,10 +8,14 @@ import ViewNav from '../../layouts/ViewNav/index.jsx';
 
 import firstTimeISawYourFace from '../../assets/poems/first-time-i-saw-your-face.json';
 import kastinah from '../../assets/poems/kastinah.json';
+import loveStory from '../../assets/poems/love-story.json';
+import happyBirthday from '../../assets/poems/happy-birthday.json';
 
 const poems = [
   firstTimeISawYourFace,
-  kastinah
+  kastinah,
+  loveStory,
+  happyBirthday
 ].reverse();
 
 export default function Poems() {
