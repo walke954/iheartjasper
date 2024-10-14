@@ -10,12 +10,14 @@ import firstTimeISawYourFace from '../../assets/poems/first-time-i-saw-your-face
 import kastinah from '../../assets/poems/kastinah.json';
 import loveStory from '../../assets/poems/love-story.json';
 import happyBirthday from '../../assets/poems/happy-birthday.json';
+import iLoveYouLikeCrazy from '../../assets/poems/i-love-you-like-crazy.json';
 
 const poems = [
   firstTimeISawYourFace,
   kastinah,
   loveStory,
-  happyBirthday
+  happyBirthday,
+  iLoveYouLikeCrazy
 ].reverse();
 
 export default function Poems() {
@@ -32,7 +34,7 @@ export default function Poems() {
     if (poemData.id !== poemId) {
       navigate(`/${poemData.id}`, { replace: true });
     }
-  }, [poemData, poemId])
+  }, [poemData, poemId, navigate]);
 
   const navigation = (
     <PoemNav data={poems} onNavigate={() => navRef.current.collapse()} />
